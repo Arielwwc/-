@@ -5,7 +5,7 @@
 #myDIV {
     width: 100px;
     height: 100px;
-	background-color: white;
+	background-color: black;
     color: white;
     -webkit-animation: mymove 2s infinite; /* Chrome, Safari, Opera */
     animation: mymove 2s infinite;
@@ -13,35 +13,45 @@
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-    50% {box-shadow: 10px 20px 30px pink;}
-	
+    50% {box-shadow: 20px 20px 30px white;}
 }
-
 /* Standard syntax */
 @keyframes mymove {
-    50% {box-shadow: 10px 20px 30px pink;}
+    50% {box-shadow: 20px 20px 30px white;}
 	
 }
+body {
+	background-image: url(images/w2-bg.png);
+	background-repeat: repeat;
+}
+
 </style>
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>気楽に行こうよ！</title>
+
 </head>
+
+
+
+
 
 
 
 <body>
 <div id="myDIV">
-  <h1>myDIV</h1>
+  <h1>ベストを尽くしてね</h1>
 </div>
 
-
-<p>Click the button to display what day it is today:</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
+<table width="100%" height ="100%" border="0" cellspacing="100%" cellpadding="100%">
+  <tr>
+    <td align="center" valign="middle">
+		<strong><p>気楽に行こうよ！</p></strong><a href="camera.html"></a>
+    <div class="shake shake-slow">
+      <a href="javascript:AlertIt();">      
+      <img src="images/w2-pi.png" width=350 height=350>        
+        </dive>      
+     <p><button onclick="myFunction()">Oops!!</button></p>
+      <p id="demo"></p>
 
 <script>
 function myFunction() {
@@ -72,6 +82,53 @@ function myFunction() {
     document.getElementById("demo").innerHTML = "Today is " + day;
 }
 </script>
+
+
+<script type="text/javascript">
+function AlertIt(){
+	//亂數
+	var myrandom=Math.round(Math.random()*5)
+	//一些白痴的話，用矩陣 Array
+	//訊息清單~~~message"s"~~～s要注意
+	var messages=new Array()
+	messages[0]="お菓子づくり～"
+	messages[1]="【短編映画】口笛なんか吹いて"
+	messages[2]="Angus and Julia Stone"
+	messages[3]="中田クルミ30の質問"
+	messages[4]="eのスピリット"
+	messages[5]="THE GRATE GARGER"
+	//連結清單
+	var links=new Array()
+	links[0]="https://www.youtube.com/watch?v=1XXqMA_pvww"
+	links[1]="https://www.youtube.com/watch?v=hDpRQH79yBE"
+	links[2]="https://www.youtube.com/watch?v=Uj1AOKUPYTY"
+	links[3]="https://www.youtube.com/watch?v=VTaE75f2QYs"
+	links[4]="https://www.youtube.com/watch?v=FyJ3MS2GF9w"
+	links[5]="https://www.youtube.com/watch?v=3VRaMghpqNo"
+	links[6]="https://www.youtube.com/watch?v=3hL4vfdZ1yE"
+	
+	//呼叫確認視窗
+	//點下去要顯示
+	var answer = confirm (messages[myrandom])
+	
+	//重點來了，如果點「是」，就連去該變數所指的網站
+	//如果點「否」～～驚歎號！+ answer~~
+	if (!answer)
+	window.location=links[6]
+	
+	//如果點「是」前往後頭網頁
+	if (answer)
+	window.location=links[myrandom]
+}
+</script>
+
+     </a>
+	</td>
+  </tr>
+</table>
+
+
+
 
 
 </body>
