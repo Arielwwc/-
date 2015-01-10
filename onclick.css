@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+left: 0px;
+-webkit-transform:
+        rotate(0deg);
+-webkit-transition: 1s;	
+
+
+onclick
+	
+left: 500px;
+-webkit-transform:
+        rotate(360deg);
+-webkit-transition: 1s;
